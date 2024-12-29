@@ -1,0 +1,30 @@
+FRONTEND
+    React 19 RC 
+        - Handle dependancies/conflicts
+            - Zustand (local storage)
+    {
+        Next.js 15
+            - New Caching technique
+            - Server components
+            - New FORM component
+            -Route.ts
+            -------------
+            | Tailwind  | << shadch - search
+            | CSS       |
+            -------------
+    }
+BACKEND
+    SANITY
+        - live content lake - Visual Editor
+        - typegen for GROQ queries
+
+Authentication
+    Clerk
+        - gmail auth
+        - Next.js 15 Support
+        - Passkeys
+    Typescript
+
+Payments
+    Stripe
+    Webhooks
