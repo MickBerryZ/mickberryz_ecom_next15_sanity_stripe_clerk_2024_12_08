@@ -31,7 +31,7 @@ export default function Header() {
           href="/"
           className="text-2xl font-bold text-blue-500 hover:opacity-50 cursor-pointer mx-auto sm:mx-0"
         >
-          Shopr
+          MickBerryZ
         </Link>
 
         <Form
