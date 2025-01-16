@@ -13,7 +13,7 @@ interface BasketState {
   removeItem: (productId: string) => void;
   clearBasket: () => void;
   getTotalPrice: () => number;
-  getItemsCount: (productId: string) => number;
+  getItemCount: (productId: string) => number;
   getGroupedItems: () => BasketItem[];
 }
 
@@ -58,7 +58,7 @@ const useBasketStore = create<BasketState>()(
           0
         );
       },
-      getItemsCount: (productId) => {
+      getItemCount: (productId) => {
         const item = get().items.find((item) => item.product._id === productId);
         return item ? item.quantity : 0;
       },
