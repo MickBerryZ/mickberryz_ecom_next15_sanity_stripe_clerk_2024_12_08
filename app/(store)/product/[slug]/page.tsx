@@ -4,6 +4,7 @@ import { imageUrl } from "@/lib/imageUrl";
 import { getProductBySlug } from "@/sanity/lib/products/getProductBySlug";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 async function ProductPage({
@@ -57,7 +58,9 @@ async function ProductPage({
 
           <div className="mt-6">
             <AddToBasketButton product={product} disabled={isOutOfStock} />
-            <Button>Add to Basket</Button>
+            {/* <Link href="/basket">
+              <span>Add to Basket</span>
+            </Link> */}
           </div>
         </div>
       </div>
