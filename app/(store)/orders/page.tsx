@@ -113,22 +113,14 @@ async function Orders() {
                             <p className="text-sm text-gray-600">
                               Quantity: {product.quantity ?? "N/A"}
                             </p>
-                            {/* <p className="text-sm text-gray-600">
-                              Price: £{product.product?.price ?? "N/A"}
+                            <p className="text-sm text-gray-600">
+                              Price/each: £{product.product?.price ?? "N/A"}
                             </p>
-                            <p className="text-sm text-gray-600 font-bold">
-                              Total Amount:{" "}
-                              {product.product?.price && product.quantity
-                                ? formatCurrency(
-                                    product.product?.price * product.quantity,
-                                    order.currency
-                                  )
-                                : "N/A"}
-                            </p> */}
                           </div>
                         </div>
 
-                        <p className="font-medium text-right">
+                        <p className="text-sm text-gray-600 font-bold">
+                          Calculate:{" "}
                           {product.product?.price && product.quantity
                             ? formatCurrency(
                                 product.product?.price * product.quantity,
@@ -136,6 +128,15 @@ async function Orders() {
                               )
                             : "N/A"}
                         </p>
+
+                        {/* <p className="font-medium text-right">
+                          {product.product?.price && product.quantity
+                            ? formatCurrency(
+                                product.product?.price * product.quantity,
+                                order.currency
+                              )
+                            : "N/A"}
+                        </p> */}
                       </div>
                     ))}
                   </div>
