@@ -24,18 +24,18 @@ export async function createCheckoutSession(
     // Check if any grouped items don't have a price
     const itemsWithoutPrice = items.filter((item) => !item.product.price);
     if (itemsWithoutPrice.length > 0) {
-      throw new Error("Some items do not have a price. Please remove them");
+      throw new Error("Some items do not have a price.");
     }
 
     // Search for existing customer by email address
-    const customer = await stripe.customers.list({
+    const customers = await stripe.customers.list({
       email: metadata.customerEmail,
       limit: 1,
     });
 
     let customerId: string | undefined;
-    if (customer.data.length > 0) {
-      customerId = customer.data[0].id;
+    if (customers.data.length > 0) {
+      customerId = customers.data[0].id;
     }
 
     const baseUrl =
@@ -88,5 +88,6 @@ export async function createCheckoutSession(
     return session.url;
   } catch (error) {
     console.error("Error creating checkout session:", error);
+    throw error;
   }
 }
