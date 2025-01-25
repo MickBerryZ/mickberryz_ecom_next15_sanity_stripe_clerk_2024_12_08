@@ -60,8 +60,10 @@ async function Orders() {
                       </span>
                     </div>
                     <div className="sm:text-right">
-                      <p className="text-sm text-gray-600 mb-1">Total Amount</p>
-                      <p className="font-bold text-lg">
+                      <p className="font-bold text-3xl underline mb-1">
+                        Total Amount
+                      </p>
+                      <p className="font-bold text-3xl">
                         {formatCurrency(order.totalPrice ?? 0, order.currency)}
                       </p>
                     </div>
