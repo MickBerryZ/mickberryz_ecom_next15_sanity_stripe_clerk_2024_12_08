@@ -1,0 +1,5 @@
+npm run dev
+
+stripe login
+
+stripe listen --forward-to localhost:3000/webhook

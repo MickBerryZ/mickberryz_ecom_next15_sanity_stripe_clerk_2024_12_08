@@ -33,7 +33,7 @@ async function Orders() {
                 <div className="p-4 sm:p-6 border-b border-gray-200">
                   <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center mb-4">
                     <div>
-                      <p className="text-sm text-gray-600 mb-1 font-bold">
+                      <p className="text-xl text-gray-600 mb-1 font-bold">
                         Order Number
                       </p>
                       <p className="font-mono text-sm text-green-600 break-all">
@@ -60,7 +60,7 @@ async function Orders() {
                       </span>
                     </div>
                     <div className="sm:text-right">
-                      <p className="font-bold text-3xl underline mb-1">
+                      <p className="font-bold text-xl underline mb-1">
                         Total Amount
                       </p>
                       <p className="font-bold text-3xl">
@@ -122,7 +122,7 @@ async function Orders() {
                         </div>
 
                         <p className="text-sm text-gray-600 font-bold">
-                          Calculate:{" "}
+                          {" "}
                           {product.product?.price && product.quantity
                             ? formatCurrency(
                                 product.product?.price * product.quantity,
